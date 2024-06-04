@@ -4,7 +4,7 @@ var accountPassword = "12345"
 accountCity = "Jaipur"
 let accountState; //here if we leave the variable without assigining anything to it , then that will be undefined
 
-// accountId = 2 // not allowed
+// accountId = 2 // not allowed as it was declared constant
 
 
 accountEmail = "hc@hc.com"
