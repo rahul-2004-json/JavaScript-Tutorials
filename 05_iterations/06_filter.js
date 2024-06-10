@@ -15,7 +15,7 @@ const coding = ["js", "ruby", "java", "python", "cpp"]
 
 
 
-//Filter method in JS for arrays or objects
+//++++++++++++++++++++++++ Filter method in JS for arrays or objects  ++++++++++++++++++++++++++
 // const newcod=coding.filter((item)=>{
 //     return item===`java`;
 // })
