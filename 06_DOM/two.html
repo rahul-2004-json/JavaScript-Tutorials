@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121 ; color:white;">
+    <div class="parent">
+       <div class="day1">Monday</div>
+       <div class="day2">Tuesday</div>
+       <div class="day3">Wednesday</div>
+       <div class="day4">Thursday</div>
+    </div>
+
+    <script>
+        // const temp=document.getElementsByClassName('day1')[0];    //here accessed with the help of [0] as we got htmlcollection with us
+        // console.log(temp);    //htmlcollection which is like an array is returned to us
+        // temp.style.color="orange";
+
+        const par=document.querySelector('.parent');  //here we taken the hold of parent div of all 4 divs
+        // console.log(par);  
+
+        //how to get all the childrens present inside the parent div
+        const child=par.children;
+        // console.log(child);  // a html collection is returned to us
+
+        //how to manipulate with the childrens
+        child[0].style.color="orange"
+        child[3].style.color="orange"
+
+        //if we want to access the parentElement from the child element then we use like
+        console.log(child[0].parentElement); // whole parent div would be returned to us
+
+        //we can also use below methods 
+        // console.log(parent.firstElementChild);
+        // console.log(parent.lastElementChild);
+        // console.log(dayOne.nextElementSibling);
+
+
+        console.log("NODES: ", par.childNodes);   
+        //childNodes method basically returns each and every component-element present inside the parent div even including line break and comments 
+    </script>
+</body>
+
+</html>

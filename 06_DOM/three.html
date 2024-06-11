@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:#212121; color:aqua"> 
+
+</body>
+
+<script>
+    //How to create element inside the DOM
+    const element=document.createElement('div');
+    console.log(element);
+    //setting attributes of the created element : Note : any element that is created has it's own Nodelist and that Nodelist has attributes that needs to be set
+    //This way of setting the attributes tends to overwrite the original content by first fetching it and then changing it. Hence less preferred
+    element.className="div-main";
+    
+    //This method of setting attributes is more prefered as it just changes the value directly
+    element.setAttribute("title","Hello");
+
+    //Not correct way to put style to a created element
+    // element.style.setAttribute("style","background-color:aqua");
+    // element.setAttribute("style","color:white");
+    
+
+    //This way of adding text is also correct
+    element.innerText="Hello World";
+
+    // //Much prefered way to add text in the 
+    const addText=document.createTextNode("My Name is Rahul");
+    //Add the text node to the created element
+    element.appendChild(addText);
+
+    element.style.backgroundColor= "aqua";
+    element.style.color= "white";
+
+    //Add the created div element to the body
+    document.body.appendChild(element);
+
+
+</script>
+</html>
