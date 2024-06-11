@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Learning</title>
+</head>
+<body>
+    <div class="div1">Text</div>
+    <div class="div1">Text</div>
+
+</body>
+</html>
+
+
+<!-- There is a flow diagram that is made of the DOM and how to reach each element inside document -->
+ <!-- 
+//For above html code we have following dom flow diagram
+window -> document ->html -> head ->metadata
+                                  ->title
+
+                          -> body ->div-> attribute
+                                        -> text node
+
+ -->
+
+
+<!-- we can access a lot of window elements by writing                document.getElementById("id-here").innerHTML= "<h1>Text changed</h1>"               -->
+
+
+
+
+<!-- 
+NodeList and HTMLCollections are not pure arrays thus we need to check by printing their value in console and check their prototype for available methods that can be performed on them
+
+//We get (NodeList) when we run (querySelectorAll) 
+//If we need to change the value of any element then will have to do like               variable_name[index].style.color= "red";           like this
+//We can run forEach on the NodeList obtained to us to carry out changes
+
+
+//Note if we want to use methods of arrays like map , forEach on HTMLcollections or NodeList then we will have to convert them first
+//How to convert NodeList and HTMLcollections to arrays
+-> Array.from(write here the place from which the array should be converted)
+
+
+
+//Main difference between textContent and innertext is that in textContent we see everything inside the tag even hidden span tags also 
+//But in innertext we don't see it.
+
+
+
+
+//How to use DOM Manipulation
+//1 way by using querySelector it gives only the first tag to us
+const h1tag=document.querySelector('h1');
+h1tag.style.color='red';
+h1tag.innerHTML="<h4>Rahul Yadav</h4>";
+
+
+
+//2nd way  querselectorAll gives all the tags present in the entire dom
+By using querySelectorAll();
+We will store it in a variable and convert it into an array by using  Array.from()
+->const temp=document.querySelectorAll('div');     can pass here like '.class_name'  and '#id'
+->const alldiv= Array.from(temp);
+->alldiv.forEach((items)=>items.style.backgroundColor='red');
+
+
+
+-->
