@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    
+
+    const sayname=function(item){
+        console.log(item,Date.now());
+    }
+
+    let intervalid;
+    const startit=function(){
+        console.log(`started`);
+        //in set interval we can also pass the parameter that we want to use or take input from user
+        intervalid=setInterval(sayname,1000,"Rahul");
+    }
+
+    const stopit=function(){
+        console.log(`stopped`);
+        clearInterval(intervalid);
+    }
+
+    //now using start button to toggle the writing of Rahul in console and stop to end the writing
+    document.querySelector('#start').addEventListener('click',startit,false);
+
+    //now stopping the setInterval
+    document.querySelector('#stop').addEventListener('click',stopit,false);
+
+    
+</script>
+</html>
